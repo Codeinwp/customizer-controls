@@ -1,5 +1,5 @@
 # Customizer controls
-[![WordPress](https://img.shields.io/wordpress/v/akismet.svg?style=flat-square)]() [![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)]() [![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars)]() 
+[![WordPress](https://img.shields.io/wordpress/v/akismet.svg?style=flat-square)]() [![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)]()
 
 A collection of cool customizer controls that will help you give your users a better experience. 
  
