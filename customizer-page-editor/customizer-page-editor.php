@@ -3,7 +3,7 @@
  * Sync functions for control.
  */
 
-define( 'CUSTOMIZER_PAGE_EDITOR_VERSION', '1.1.0' );
+define( 'CUSTOMIZER_PAGE_EDITOR_VERSION', '1.0.0' );
 
 /**
  * Require class file
