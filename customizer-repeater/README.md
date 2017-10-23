@@ -1,42 +1,63 @@
-# Customizer Repeater v( 1.1.0 )
+# Customizer Repeater 1.1.0
 
-## What is Customizer Repeater?
+### What is Customizer Repeater?
 
 Customizer Repeater is a custom control for the WordPress Theme Customizer. It's designed to be super user-friendly not only for your customers but for you too.
 
-## How to install?
+![alt text](http://res.cloudinary.com/vertigo-studio-srl/image/upload/v1508771236/repeater_my0koa.gif)
 
-To install Customizer repeater copy the folder in the root of your theme and add the following line in functions.php, before you call your customizer.php file.
+### How to install?
+
+To install Customizer repeater copy the folder in the root of your theme and add the following line in `functions.php` before you call your customizer.php file.
 
          require get_template_directory() . '/customizer-repeater/functions.php';
-         /**
-          * Do not include twice the file below.
-          */
-         require get_template_directory() . '/inc/customizer.php';
+         
 
-After you did this there's only one step left. Replace 'your-textdomain' textdomain with yours.
-That's all
+After you did this there's only one step left. Replace `'your-textdomain'` textdomain with yours.
+That's all!
 
-## How to use? (backend-part)
+If you want to change its placement make sure you update files path in `functions.php` and `class/customizer-repeater-control.php` files. 
 
-There are eight types of fields that you can add in a box: (`customizer_repeater_image_control`), (`customizer_repeater_icon_control`), (`customizer_repeater_title_control`), (`customizer_repeater_subtitle_control`), (`customizer_repeater_text_control`), (`customizer_repeater_link_control`), (`customizer_repeater_shortcode_control`), (`customizer_repeater_repeater_control`). To choose what your repeater will look, just enable fields in your control's oprions. Here's an example, add the following code in your theme's customizer.php:
+### How to use? (backend-part)
 
-          $wp_customize->add_setting( 'customizer_repeater_example', array(
-             'sanitize_callback' => 'customizer_repeater_sanitize'
-          ));
-          $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'customizer_repeater_example', array(
-		'label'   => esc_html__('Example','customizer-repeater'),
-		'section' => 'my_section',
-		'priority' => 1,
-		'customizer_repeater_image_control' => true,
-		'customizer_repeater_icon_control' => true,
-		'customizer_repeater_title_control' => true,
-		'customizer_repeater_subtitle_control' => true,
-		'customizer_repeater_text_control' => true,
-		'customizer_repeater_link_control' => true,
-		'customizer_repeater_shortcode_control' => true,
-		'customizer_repeater_repeater_control' => true
-	 ) ) );
+There are twelve types of fields that you can add in a box: 
+- `customizer_repeater_image_control`
+- `customizer_repeater_icon_control`
+- `customizer_repeater_title_control`
+- `customizer_repeater_subtitle_control`
+- `customizer_repeater_text_control`
+- `customizer_repeater_text2_control`
+- `customizer_repeater_link_control`
+- `customizer_repeater_link2_control`
+- `customizer_repeater_shortcode_control`
+- `customizer_repeater_repeater_control`
+- `customizer_repeater_color_control`
+- `customizer_repeater_color2_control`
+
+To choose what your repeater will look, just enable fields in your control's oprions. Here's an example, add the following code in your theme's customizer.php:
+
+          if (class_exists( 'Customizer_Repeater' ){
+              $wp_customize->add_setting( 'customizer_repeater_example', array(
+                 'sanitize_callback' => 'customizer_repeater_sanitize'
+              ));
+              $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'customizer_repeater_example', array(
+                'label'   => esc_html__('Example','customizer-repeater'),
+                'section' => 'my_section',
+                'priority' => 1,
+                'customizer_repeater_image_control' => true,
+                'customizer_repeater_icon_control' => true,
+                'customizer_repeater_title_control' => true,
+                'customizer_repeater_subtitle_control' => true,
+                'customizer_repeater_text_control' => true,
+                'customizer_repeater_text2_control' => true,
+                'customizer_repeater_link_control' => true,
+                'customizer_repeater_link2_control' => true,
+                'customizer_repeater_shortcode_control' => true,
+                'customizer_repeater_repeater_control' => true
+                'customizer_repeater_color_control' => true
+                'customizer_repeater_color2_control' => true
+              ) ) );
+          }
 
 
 Customizer Repeater also supports default input. If you want to add default input for your repeater here's how you do it:
@@ -45,16 +66,16 @@ Customizer Repeater also supports default input. If you want to add default inpu
              'sanitize_callback' => 'customizer_repeater_sanitize',
              'default' => json_encode( array(
                 /*Repeater's first item*/
-                array("image_url" => get_template_directory_uri().'/images/companies/1.png' ,"link" => "#", "id" => "customizer_repeater_56d7ea7f40f56" ), //every item in default string should have an unique id, it helps for translation
+                array("image_url" => get_template_directory_uri().'/images/companies/1.png' ,"link" => "#"), //every item in default string should have an unique id, it helps for translation
                 /*Repeater's second item*/
-                array("image_url" => get_template_directory_uri().'/images/companies/1.png' ,"link" => "#", "id" => "customizer_repeater_56d7ea7f40f57" ),
+                array("image_url" => get_template_directory_uri().'/images/companies/1.png' ,"link" => "#"),
                 /*Repeater's third item*/
-                array("image_url" => get_template_directory_uri().'/images/companies/1.png' ,"link" => "#", "id" => "customizer_repeater_56d7ea7f40f58" ),
+                array("image_url" => get_template_directory_uri().'/images/companies/1.png' ,"link" => "#"),
                 ) )
          ) );
 
 
-## How to use? (frontend-part)
+### How to use? (frontend-part)
 
 To get the input from your control just call it in the normal way:
 
@@ -64,12 +85,16 @@ To get the input from your control just call it in the normal way:
           foreach($customizer_repeater_example_decoded as $repeater_item){
               echo $repeater_item->icon_value;
               echo $repeater_item->text;
+              echo $repeater_item->text2;
               echo $repeater_item->link;
+              echo $repeater_item->link2;
               echo $repeater_item->image_url;
               echo $repeater_item->choice;
               echo $repeater_item->title;
               echo $repeater_item->subtitle;
               echo $repeater_item->shortcode;
+              echo $repeater_item->color;
+              echo $repeater_item->color2;
               /*Social repeater is also a repeater so we need to decode it*/
               $social_repeater = json_decode($repeater_item->social_repeater);
               foreach($social_repeater as $social_repeater){
@@ -77,7 +102,7 @@ To get the input from your control just call it in the normal way:
                    echo $social_repeater->icon;
               }
           }
-## Filters
+### Filters
 
 In some cases you may want to rename labels for inputs. Let's say you use this control to display a testimonial section.
 It's pretty confusing for the user to see "Title" instead of "Member name" or something else. Or in some cases you need a
@@ -126,9 +151,9 @@ textarea instead of a simple imput. Here's what you need to do:
          }
          add_filter( 'repeater_input_labels_filter','repeater_labels', 10 , 3 );
 
-## Contribute
+### Contribute
 
-Customizer Repeater is not perfect, but hey, It works! Do you want to make it better? Feel free to fork this and make changes on development branch.
+Customizer Repeater is not perfect but it works! Do you want to make it better? Feel free to fork this and make changes on development branch.
 
-## Contributors
+### Contributors
 Special thanks for making this awesome go to [@abaicus](https://github.com/abaicus).
