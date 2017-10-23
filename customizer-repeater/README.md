@@ -1,5 +1,5 @@
 # Customizer Repeater 1.1.0
-
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)]() [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)]()
 ### What is Customizer Repeater?
 
 Customizer Repeater is a custom control for the WordPress Theme Customizer. It's designed to be super user-friendly not only for your customers but for you too.
