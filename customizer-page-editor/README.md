@@ -60,5 +60,10 @@ To get the input from your control just call it in the normal way:
 
 ### Contribute
 
-Customizer Repeater is not perfect but it works! Do you want to make it better? Feel free to fork this and make changes on development branch.
+You can make this better by contributing. If you find a bug or simply want to contribute to this collection, submit your pull request and we'll have a look on it.  
+
+How can you help?
+- Submit a bug
+- Fix reported bugs
+- Share with us another cool control
 
