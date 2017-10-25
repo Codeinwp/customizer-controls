@@ -55,8 +55,8 @@ WYSIWYG control also supports default input. If you want to add default input fo
 
 To get the input from your control just call it in the normal way:
 
-          $customizer_page_editor = get_theme_mod('customizer_page_editor', __( 'Your content here', 'your-textdomain') );
-          echo wp_kses_post( $customizer_page_editor );
+      $customizer_page_editor = get_theme_mod('customizer_page_editor', __( 'Your content here', 'your-textdomain') );
+      echo wp_kses_post( $customizer_page_editor );
 
 ### Contribute
 
