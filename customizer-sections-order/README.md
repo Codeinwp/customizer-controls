@@ -48,6 +48,9 @@ In your theme files where you've declared the sections in that panel, make sure 
         )
     );
 
+#### Step 5
+Replace panel name and theme prefix in `css/customizer-sections-order-style.css`.
+
 We're done with the setup! I know it's a little bit tricky but it's worth it!
 
 ### How to use it
