@@ -1,5 +1,5 @@
-# Customizer Repeater 1.1.0
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)]() [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)]()
+# Customizer Repeater
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://opensource.org/licenses/MIT) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20customizer%20control%20from%20@Themeisle%20team!%20https://github.com/Codeinwp/customizer-controls/tree/master/customizer-repeater)
 ### What is Customizer Repeater?
 
 Customizer Repeater is a custom control for the WordPress Theme Customizer. It's designed to be super user-friendly not only for your customers but for you too.
@@ -9,10 +9,12 @@ Customizer Repeater is a custom control for the WordPress Theme Customizer. It's
 ### How to install?
 
 To install Customizer repeater copy the folder in the root of your theme and add the following line in `functions.php` before you call your customizer.php file.
-
+    
+    function load_customize_classes( $wp_customize ) {
          require get_template_directory() . '/customizer-repeater/functions.php';
-         
-
+    } 
+    add_action( 'customize_register', 'load_customize_classes', 0 );
+    
 After you did this there's only one step left. Replace `'your-textdomain'` textdomain with yours.
 That's all!
 
@@ -35,7 +37,8 @@ There are twelve types of fields that you can add in a box:
 - `customizer_repeater_color2_control`
 
 To choose what your repeater will look, just enable fields in your control's oprions. Here's an example, add the following code in your theme's customizer.php:
-
+    
+    function xxx_customize_register( $wp_customize ) {
           if (class_exists( 'Customizer_Repeater' ){
               $wp_customize->add_setting( 'customizer_repeater_example', array(
                  'sanitize_callback' => 'customizer_repeater_sanitize'
@@ -58,8 +61,9 @@ To choose what your repeater will look, just enable fields in your control's opr
                 'customizer_repeater_color2_control' => true
               ) ) );
           }
-
-
+    }
+    add_action( 'customize_register', 'xxx_customize_register' );
+    
 Customizer Repeater also supports default input. If you want to add default input for your repeater here's how you do it:
 
          $wp_customize->add_setting( 'customizer_repeater_example', array(
