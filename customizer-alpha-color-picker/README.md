@@ -26,7 +26,6 @@ That's all!
 Drop this in your theme or plugin's customizer.php file:
 
 ```php
-add_action( 'customize_register', 'xxx_customize_register' );
 function xxx_customize_register( $wp_customize ) {
 
     if( class_exists('Customize_Alpha_Color_Control'){
@@ -62,7 +61,7 @@ function xxx_customize_register( $wp_customize ) {
         );
     }
 }
-
+add_action( 'customize_register', 'xxx_customize_register' );
 ```
 
 ### More Information ###

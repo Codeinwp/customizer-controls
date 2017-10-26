@@ -13,7 +13,7 @@ To install Customizer repeater copy the folder in the root of your theme and add
      function load_customize_classes( $wp_customize ) {  
          require get_template_directory() . '/customizer-font-selector/functions.php';
      }
-     add_action( 'customize_register', 'load_customize_classes', 0 );require get_template_directory() . '/customizer-font-selector/functions.php';
+     add_action( 'customize_register', 'load_customize_classes', 0 )
          
 
 After you did this there's only one step left. Replace `your-textdomain` textdomain with yours.

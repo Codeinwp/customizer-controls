@@ -1,5 +1,6 @@
-# WYSIWYG 1.0.0
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)]() [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)]()
+# WYSIWYG
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://opensource.org/licenses/MIT) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20customizer%20control%20from%20@Themeisle%20team!%20https://github.com/Codeinwp/customizer-controls/tree/master/customizer-page-editor)
+
 ### What is WYSIWYG Control?
 
 WYSIWYG Control is a text editor directly in your customizer.
@@ -9,26 +10,30 @@ WYSIWYG Control is a text editor directly in your customizer.
 ### How to install?
 
 To install Customizer repeater copy the folder in the root of your theme and add the following line in `functions.php` before you call your customizer.php file.
-
+    
+    function load_customize_classes( $wp_customize ) {  
          require get_template_directory() . '/customizer-page-editor/customizer-page-editor.php';';
+    }
+    add_action( 'customize_register', 'load_customize_classes', 0 )
          
 
-After you did this there's only one step left. Replace `'your-textdomain'` textdomain with yours.
+After you did this there's only one step left. Replace `your-textdomain` textdomain with yours.
 That's all!
 
 If you want to change its placement make sure you update files path in `functions.php` and `class/customizer-repeater-control.php` files. 
 
 ### How to use? (backend-part)
 
-Here's an example of how to add this control, add the following code in your theme's customizer.php:
+Here's an example of how to add this control, add the following code in your theme's `customizer.php`:
 
-          if (class_exists( 'Customizer_Page_Editor' ){
+    function xxx_customize_register( $wp_customize ) {
+        if (class_exists( 'Customizer_Page_Editor' ){
             $wp_customize->add_setting(
                 'customizer_page_editor', array(
                     'sanitize_callback' => 'wp_kses_post',
                 )
             );
-              
+          
             $wp_customize->add_control(
                 new Customizer_Page_Editor(
                     $wp_customize, 'customizer_page_editor', array(
@@ -38,7 +43,9 @@ Here's an example of how to add this control, add the following code in your the
                     )
                 )
             );
-          }
+        }
+    }
+    add_action( 'customize_register', 'xxx_customize_register' );
 
 
 WYSIWYG control also supports default input. If you want to add default input for your repeater here's how you do it:
