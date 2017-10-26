@@ -1,7 +1,9 @@
 # Customizer tabs
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://opensource.org/licenses/MIT) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20customizer%20control%20from%20@Themeisle%20team!%20https://github.com/Codeinwp/customizer-controls/tree/master/customizer-tabs)  
 
 Customizer tabs control comes from the need to better organize your controls in customizer. It's not really a control but it comes in handy when you have too many controls and you want to organize them better.
 
+![Demo](http://res.cloudinary.com/vertigo-studio-srl/image/upload/v1509018763/GIF-4_s28vev.gif)
 ### Installation
 
 Copy the folder in the root of your theme and add the following function in `functions.php` or `customizer.php`.
