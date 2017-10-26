@@ -1,5 +1,5 @@
 # Customizer controls
-[![WordPress](https://img.shields.io/wordpress/v/akismet.svg?style=flat-square)]() [![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)]()
+[![WordPress](https://img.shields.io/wordpress/v/akismet.svg?style=flat-square)]() [![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)](https://github.com/Codeinwp/customizer-controls)
 
 A collection of cool customizer controls that will help you give your users a better experience. 
  
@@ -24,11 +24,13 @@ Each of those controls are designed to improve UX. They are super user-friendly 
 
 Not all controls are made by us. Special thanks to those awesome people that are making WordPress better by sharing:
   
-- [BraadMartin]( https://github.com/BraadMartin ) - thanks for [Alpha color picker]( https://github.com/BraadMartin/components/tree/master/alpha-color-picker )
-- [Optimizerwp.com]( https://optimizerwp.com/ ) - thanks for inspiring our WYSIWYG control
-- [Justin Tadlock]( https://github.com/justintadlock ) - thanks for [Multiple select]( https://github.com/justintadlock/hybrid-core/blob/master/customize/control-select-multiple.php )
+- [BraadMartin]( https://github.com/BraadMartin )
+- [Optimizerwp.com]( https://optimizerwp.com/ )
+- [Justin Tadlock]( https://github.com/justintadlock )
 
 Special thanks to our developers who constantly update and maintain those controls.
+- [Andrei Baicus]( https://github.com/abaicus )
+- [Cristian Ungureanu]( https://github.com/cristian-ungureanu )
 
 ### Contribute
 
