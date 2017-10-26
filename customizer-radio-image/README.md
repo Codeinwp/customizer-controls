@@ -1,4 +1,4 @@
-# Customizer radio image 1.0.0
+# Customizer radio image
 [![Travis](https://img.shields.io/badge/license-GPL-green.svg)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20customizer%20control%20from%20@Themeisle%20team!%20https://github.com/Codeinwp/customizer-controls/tree/master/customizer-radio-image)
 ### What is Customizer radio image ?
 
