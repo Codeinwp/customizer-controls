@@ -1,5 +1,5 @@
 # Customizer sections order
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)]() [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)]()  
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://opensource.org/licenses/MIT) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20customizer%20control%20from%20@Themeisle%20team!%20https://github.com/Codeinwp/customizer-controls/tree/master/customizer-sections-order)  
 
 Customizer sections order allow you to change sections order on your frontpage or wherever you want to use it.
 
