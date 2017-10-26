@@ -1,5 +1,5 @@
 # Alpha Color Picker #
-[![Travis](https://img.shields.io/badge/license-GPL-green.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20customizer%20control%20from%20@Themeisle%20team!%20https://github.com/Codeinwp/customizer-controls/tree/master/customizer-font-selector)  
+[![Travis](https://img.shields.io/badge/license-GPL-green.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20customizer%20control%20from%20@Themeisle%20team!%20https://github.com/Codeinwp/customizer-controls/tree/master/customizer-alpha-color-picker)  
 
 Ever wanted to pick an RGBa color using the WordPress color picker in the Customizer? Now you can with this drop-in replacement for the stock WP color picker control.
 
