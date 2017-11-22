@@ -10,10 +10,9 @@ Customizer Repeater is a custom control for the WordPress Theme Customizer. It's
 
 To install Customizer repeater copy the folder in the root of your theme and add the following line in `functions.php` before you call your customizer.php file.
     
-    function load_customize_classes( $wp_customize ) {
-         require get_template_directory() . '/customizer-repeater/functions.php';
-    } 
-    add_action( 'customize_register', 'load_customize_classes', 0 );
+    
+    require get_template_directory() . '/customizer-repeater/functions.php';
+    
     
 After you did this there's only one step left. Replace `'your-textdomain'` textdomain with yours.
 That's all!
@@ -39,7 +38,7 @@ There are twelve types of fields that you can add in a box:
 To choose what your repeater will look, just enable fields in your control's oprions. Here's an example, add the following code in your theme's customizer.php:
     
     function xxx_customize_register( $wp_customize ) {
-          if (class_exists( 'Customizer_Repeater' ){
+          if (class_exists( 'Customizer_Repeater' ) ){
               $wp_customize->add_setting( 'customizer_repeater_example', array(
                  'sanitize_callback' => 'customizer_repeater_sanitize'
               ));
@@ -56,9 +55,9 @@ To choose what your repeater will look, just enable fields in your control's opr
                 'customizer_repeater_link_control' => true,
                 'customizer_repeater_link2_control' => true,
                 'customizer_repeater_shortcode_control' => true,
-                'customizer_repeater_repeater_control' => true
-                'customizer_repeater_color_control' => true
-                'customizer_repeater_color2_control' => true
+                'customizer_repeater_repeater_control' => true,
+                'customizer_repeater_color_control' => true,
+                'customizer_repeater_color2_control' => true,
               ) ) );
           }
     }
