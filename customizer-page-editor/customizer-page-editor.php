@@ -1,6 +1,8 @@
 <?php
 /**
  * Sync functions for control.
+ *
+ * @package customizer-controls
  */
 
 define( 'CUSTOMIZER_PAGE_EDITOR_VERSION', '1.0.0' );
@@ -40,8 +42,8 @@ add_action( 'customize_controls_print_footer_scripts', 'customizer_editor', 1 );
  * @return array
  */
 function customizer_editor_override_mce_options( $init_array ) {
-	$opts = '*[*]';
-	$init_array['valid_elements'] = $opts;
+	$opts                                  = '*[*]';
+	$init_array['valid_elements']          = $opts;
 	$init_array['extended_valid_elements'] = $opts;
 	return $init_array;
 }

@@ -8,6 +8,7 @@
  * @copyright  Copyright (c) 2017, Themeisle
  * @link       http://themeisle.com/
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package customizer-controls
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) {

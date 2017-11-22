@@ -1,0 +1,23 @@
+{
+  "name": "customizer-controls",
+  "version": "1.0.0",
+  "description": "Customizer modules",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codeinwp/customizer-controls.git"
+  },
+  "keywords": [
+    "wordpress-plugin"
+  ],
+  "textdomain": "your-textdomain",
+  "author": "ThemeIsle <friends@themeisle.com>",
+  "license": "GPL-2.0+",
+  "category": "plugins",
+  "bugs": {
+    "url": "https://github.com/Codeinwp/customizer-controls/issues"
+  },
+  "devDependencies": {
+    "grunt-plugin-fleet": "codeinwp/grunt-plugin-fleet",
+    "load-project-config": "~0.2.0"
+  }
+}

@@ -1,6 +1,8 @@
 <?php
 /**
  * Customizer sections order main file
+ *
+ * @package customizer-controls
  */
 
 define( 'SECTIONS_ORDER_VERSION', '1.0.0' );
@@ -12,8 +14,8 @@ function sections_order_script() {
 	wp_enqueue_script( 'customizer-sections-order-script', get_template_directory_uri() . '/customizer-sections-order/js/customizer-sections-order.js', array( 'jquery', 'jquery-ui-sortable' ), SECTIONS_ORDER_VERSION, true );
 	$control_settings = array(
 		'sections_container' => '#accordion-panel-your_panel_name > ul, #sub-accordion-panel-your_panel_name', // Edit this
-		'blocked_items' => '#accordion-section-blocked_section1, #accordion-section-blocked_section2, #accordion-section-blocked_section3', // Edit this
-		'saved_data_input' => '#customize-control-sections_order input', // Edit this
+		'blocked_items'      => '#accordion-section-blocked_section1, #accordion-section-blocked_section2, #accordion-section-blocked_section3', // Edit this
+		'saved_data_input'   => '#customize-control-sections_order input', // Edit this
 	);
 	wp_localize_script( 'customizer-sections-order-script', 'control_settings', $control_settings );
 	wp_enqueue_style( 'customizer-sections-order-style', get_template_directory_uri() . '/customizer-sections-order/css/customizer-sections-order-style.css', array( 'dashicons' ), SECTIONS_ORDER_VERSION );
@@ -36,9 +38,9 @@ function sections_order_register_control( $wp_customize ) {
 
 	$wp_customize->add_control(
 		'sections_order', array( // Edit this
-			'section'   => 'your_section_name', // Edit this
-			'type'  => 'hidden',
-			'priority'  => 80,
+			'section'  => 'your_section_name', // Edit this
+			'type'     => 'hidden',
+			'priority' => 80,
 		)
 	);
 
@@ -72,7 +74,7 @@ add_filter( 'section_priority', 'sections_order_section_priority', 10, 2 );
  * Function to refresh customize preview when changing sections order
  */
 function sections_order_refresh_positions() {
-	$section_order = get_theme_mod( 'sections_order' ); //Edit this
+	$section_order         = get_theme_mod( 'sections_order' ); // Edit this
 	$section_order_decoded = json_decode( $section_order, true );
 	if ( ! empty( $section_order_decoded ) ) {
 		remove_all_actions( 'theme_sections' );
@@ -83,7 +85,7 @@ function sections_order_refresh_positions() {
 		}
 	}
 }
-add_action( 'customize_preview_init','sections_order_refresh_positions', 1 );
+add_action( 'customize_preview_init', 'sections_order_refresh_positions', 1 );
 
 /**
  * Function to sanitize sections order control

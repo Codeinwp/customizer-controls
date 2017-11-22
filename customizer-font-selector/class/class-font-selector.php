@@ -1,6 +1,8 @@
 <?php
 /**
  * Font selector.
+ *
+ * @package customizer-controls
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) {

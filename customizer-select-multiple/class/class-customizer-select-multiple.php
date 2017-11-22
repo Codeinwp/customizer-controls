@@ -5,9 +5,10 @@
  * theme customizer.
  *
  * @author     Justin Tadlock <justin@justintadlock.com>
+ * @package customizer-controls
  */
 
-define('MULTISELECT_VERSION', '1.0.0');
+define( 'MULTISELECT_VERSION', '1.0.0' );
 
 /**
  * Multiple select customize control class.
@@ -62,11 +63,11 @@ class Customizer_Select_Multiple extends WP_Customize_Control {
 	 * @return array
 	 */
 	public function json() {
-		$json = parent::json();
-		$json['choices'] = $this->choices;
-		$json['link']    = $this->get_link();
-		$json['value']   = (array) $this->value();
-		$json['id']      = $this->id;
+		$json                 = parent::json();
+		$json['choices']      = $this->choices;
+		$json['link']         = $this->get_link();
+		$json['value']        = (array) $this->value();
+		$json['id']           = $this->id;
 		$json['custom_class'] = $this->custom_class;
 
 		return $json;

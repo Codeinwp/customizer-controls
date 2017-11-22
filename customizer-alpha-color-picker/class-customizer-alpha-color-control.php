@@ -18,6 +18,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this Alpha Color Picker. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @package customizer-controls
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) {

@@ -6,13 +6,14 @@
  * @copyright  Copyright (c) 2016, Soderlind
  * @link       https://github.com/soderlind/class-customizer-range-value-control/blob/master/README.md
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package customizer-controls
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) {
 	return;
 }
 
-define( 'RANGE_VERSION', '1.0.0');
+define( 'RANGE_VERSION', '1.0.0' );
 
 /**
  * Class Customizer_Range_Value_Control
@@ -80,14 +81,14 @@ class Customizer_Range_Value_Control extends WP_Customize_Control {
 		$json['default_value'] = ! empty( $this->setting->default ) ? $this->setting->default : 0;
 
 		$json['desktop_value'] = ! $this->is_json( $json['value'] ) ? $json['value'] : $json['default_value'];
-		$json['tablet_value'] = $json['default_value'];
-		$json['mobile_value'] = $json['default_value'];
+		$json['tablet_value']  = $json['default_value'];
+		$json['mobile_value']  = $json['default_value'];
 
 		if ( $this->is_json( $json['value'] ) ) {
-			$decoded_value = json_decode( $json['value'], true );
+			$decoded_value         = json_decode( $json['value'], true );
 			$json['desktop_value'] = $decoded_value['desktop'];
-			$json['tablet_value'] = $decoded_value['tablet'];
-			$json['mobile_value'] = $decoded_value['mobile'];
+			$json['tablet_value']  = $decoded_value['tablet'];
+			$json['mobile_value']  = $decoded_value['mobile'];
 		} else {
 			$json['desktop_value'] = $json['value'];
 		}
@@ -276,10 +277,10 @@ class Customizer_Range_Value_Control extends WP_Customize_Control {
  */
 function sanitize_range_value( $input ) {
 	if ( is_json( $input ) ) {
-		$range_value = json_decode( $input, true );
+		$range_value            = json_decode( $input, true );
 		$range_value['desktop'] = ! empty( $range_value['desktop'] ) || $range_value['desktop'] === '0' ? floatval( $range_value['desktop'] ) : '';
-		$range_value['tablet'] = ! empty( $range_value['tablet'] ) || $range_value['tablet'] === '0' ? floatval( $range_value['tablet'] ) : '';
-		$range_value['mobile'] = ! empty( $range_value['mobile'] ) || $range_value['mobile'] === '0' ? floatval( $range_value['mobile'] ) : '';
+		$range_value['tablet']  = ! empty( $range_value['tablet'] ) || $range_value['tablet'] === '0' ? floatval( $range_value['tablet'] ) : '';
+		$range_value['mobile']  = ! empty( $range_value['mobile'] ) || $range_value['mobile'] === '0' ? floatval( $range_value['mobile'] ) : '';
 		return json_encode( $range_value );
 	}
 	return floatval( $input );

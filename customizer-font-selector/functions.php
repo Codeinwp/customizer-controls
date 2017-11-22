@@ -1,9 +1,11 @@
 <?php
 /**
  * Fonts functions
+ *
+ * @package customizer-controls
  */
 
-define('FONT_SELECTOR_VERSION','1.0.0');
+define( 'FONT_SELECTOR_VERSION', '1.0.0' );
 
 require get_template_directory() . '/customizer-font-selector/class/class-font-selector.php';
 /**
@@ -68,7 +70,7 @@ function font_selector_enqueue_google_font( $font ) {
 	$base_url = '//fonts.googleapis.com/css';
 
 	// Edit this to add more subsets
-	$subsets    = apply_filters( 'font_subsets', array( 'latin' ) );
+	$subsets = apply_filters( 'font_subsets', array( 'latin' ) );
 	if ( ! empty( $subsets ) ) {
 		$font_subsets = array();
 		foreach ( $subsets as $get_subset ) {

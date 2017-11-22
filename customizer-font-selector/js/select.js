@@ -35,12 +35,13 @@
   // returns the AMD loader references.
   var S2 =
 (function () {
+    var S2;
   // Restore the Select2 AMD loader so it can be used
   // Needed mostly in the language files, where the loader is not inserted
   if (jQuery && jQuery.fn && jQuery.fn.select2 && jQuery.fn.select2.amd) {
-    var S2 = jQuery.fn.select2.amd;
+    S2 = jQuery.fn.select2.amd;
   }
-var S2;(function () { if (!S2 || !S2.requirejs) {
+(function () { if (!S2 || !S2.requirejs) {
 if (!S2) { S2 = {}; } else { require = S2; }
 /**
  * @license almond 0.3.1 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.

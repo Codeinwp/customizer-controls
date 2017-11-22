@@ -1,6 +1,8 @@
 <?php
 /**
  * Page editor control.
+ *
+ * @package customizer-controls
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) {
